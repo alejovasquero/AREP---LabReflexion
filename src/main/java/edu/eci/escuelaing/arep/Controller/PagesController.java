@@ -6,7 +6,7 @@ public class PagesController {
 
     @RequestMapping("/")
     public static String index(){
-        return "AIIUDA";
+        return "Prueba SPRING";
     }
 
 

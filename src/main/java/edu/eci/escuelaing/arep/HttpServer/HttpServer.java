@@ -79,10 +79,10 @@ public class HttpServer {
         String type = request.get("Accept:")[1];
         System.out.println("HELLO: "+type);
         if(type.contains("text/html") || type.contains("text/css")){
-            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+            DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
             outputLine = boot.invoke(request.get("GET")[1]);
-            out.println(HeadersCollection.HTML_HEADERS);
-            out.println(outputLine);
+            out.writeBytes(HeadersCollection.HTML_HEADERS);
+            out.writeBytes(outputLine);
             out.close();
         } else {
             DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
