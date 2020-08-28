@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inserte la lista de datos :)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+
+
+
+<body>
+
+
+
+
+<script>
+    function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight)+"px";
+    }
+</script>
+
+
+<form  action="/results">
+    <textarea oninput="auto_grow(this)" id="confirmationText"  cols="86" rows ="10" name="text"></textarea>
+
+    <input type="submit" value="Enviar datos" class="button">
+</form>
+
+</body>
+</html>
