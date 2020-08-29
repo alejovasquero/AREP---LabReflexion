@@ -69,7 +69,9 @@ public class HttpServer {
                 break;
             }
         }
-        findResponse(clientSocket, a);
+        if(a.containsKey("Accept:")){
+            findResponse(clientSocket, a);
+        }
         in.close();
         clientSocket.close();
     }
