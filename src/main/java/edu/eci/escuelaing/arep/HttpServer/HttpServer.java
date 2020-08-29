@@ -75,7 +75,7 @@ public class HttpServer {
     public static void findResponse(Socket clientSocket, HashMap<String, String[]> request) throws IOException, NoSuchElementException {
 
         String outputLine = null;
-
+        System.out.println(request.get("Accept:"));
         String type = request.get("Accept:")[1];
         System.out.println("HELLO: "+type);
         if(type.contains("text/html") || type.contains("text/css")){

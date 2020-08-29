@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -cp target/classes edu.eci.escuelaing.arep.Main edu.eci.escuelaing.arep.Controller.PagesController

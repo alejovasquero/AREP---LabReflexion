@@ -50,7 +50,7 @@ Una vez compiladas las clases vamos a correr el proyecto
 java -cp target/classes edu.eci.escuelaing.arep.Main edu.eci.escuelaing.arep.Controller.PagesController
 ```
 
-Ahora vamos a entrar a nuestro browser en [localhost:4567/hello](localhost:35000/prueba)
+Ahora vamos a entrar a nuestro browser en [localhost:35000/prueba](http://localhost:35000/prueba)
 
 ## Construido con
 
@@ -71,4 +71,4 @@ Este proyecto está licenciado bajo la licencia del MIT - Vea el [LICENSE.md](LI
 
 ## Reconocimientos
 
-* Victor S.Adamchik
+* Daniel Benavides
