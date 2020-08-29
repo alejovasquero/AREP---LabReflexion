@@ -8,6 +8,7 @@ import edu.eci.escuelaing.arep.WebFram.WebFramework;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 
@@ -59,6 +60,7 @@ public class HttpServer {
         String inputLine;
         String[] argu = null;
         HashMap<String, String[]> a = new HashMap<String, String[]>();
+        System.out.println("Leyendo mensaje...");
         while ((inputLine = in.readLine()) != null) {
             System.out.println("Mensaje: " + inputLine);
             argu = inputLine.split("\\s+");
@@ -75,6 +77,7 @@ public class HttpServer {
     public static void findResponse(Socket clientSocket, HashMap<String, String[]> request) throws IOException, NoSuchElementException {
 
         String outputLine = null;
+        System.out.println(Arrays.toString(request.entrySet().toArray()));
         System.out.println(request.get("Accept:"));
         String type = request.get("Accept:")[1];
         System.out.println("HELLO: "+type);
