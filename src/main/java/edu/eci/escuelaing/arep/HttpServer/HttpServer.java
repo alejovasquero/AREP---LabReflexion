@@ -77,7 +77,6 @@ public class HttpServer {
     }
 
     public static void findResponse(Socket clientSocket, HashMap<String, String[]> request) throws IOException, NoSuchElementException {
-
         String outputLine = null;
         System.out.println(Arrays.toString(request.entrySet().toArray()));
         System.out.println(request.get("Accept:"));
