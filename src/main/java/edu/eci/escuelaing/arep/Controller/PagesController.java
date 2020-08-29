@@ -8,24 +8,25 @@ public class PagesController {
 
     @RequestMapping("/")
     public static String index(){
-        return "Prueba SPRING";
+        return HeadersCollection.HTML_HEADERS +"Prueba SPRING <p><a href=\"/prueba\">Prueba</a></p>"+
+                "<p><a href=\"/complex\">Pagina mejorada</a></p>";
     }
 
 
     @RequestMapping("/prueba")
     public static String prueba(){
-        return "<button type=\"button\">Click Me!</button>";
+        return HeadersCollection.HTML_HEADERS +"<button type=\"button\">Click Me!</button>";
     }
 
     @RequestMapping("/complex")
     public static String complex(){
-        HTMLHandler handler = new HTMLHandler("src/webapp/data.html");
+        HTMLHandler handler = new HTMLHandler("src/main/webapp/data.html");
         return HeadersCollection.HTML_HEADERS + handler.getData();
     }
 
     @RequestMapping("/css/style.css")
     public static String style(){
-        HTMLHandler handler = new HTMLHandler("src/webapp/css/style.css");
+        HTMLHandler handler = new HTMLHandler("src/main/webapp/css/style.css");
         return HeadersCollection.CSS_HEADERS + handler.getData();
     }
 }

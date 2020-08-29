@@ -1,5 +1,10 @@
 # Reflexión con Servidor Web y MySpring
 
+[![CircleCI](https://circleci.com/gh/alejovasquero/AREP---LabReflexion.svg?style=svg)](https://circleci.com/gh/alejovasquero/AREP---LabReflexion)
+
+[Despliegue en heroku](https://lab-reflexion.herokuapp.com/)
+
+-----------------
 Este repositorio contiene la implementación de un pequeño motor de
 spring, para el acceso a recursos y páginas web con Http.  
 
@@ -50,7 +55,16 @@ Una vez compiladas las clases vamos a correr el proyecto
 java -cp target/classes edu.eci.escuelaing.arep.Main edu.eci.escuelaing.arep.Controller.PagesController
 ```
 
-Ahora vamos a entrar a nuestro browser en [localhost:35000/prueba](http://localhost:35000/prueba)
+Ahora vamos a entrar a nuestro browser en [localhost:35000](http://localhost:35000)
+
+## Pruebas
+
+Para correr las pruebas
+
+```
+mvn test
+```
+
 
 ## Construido con
 

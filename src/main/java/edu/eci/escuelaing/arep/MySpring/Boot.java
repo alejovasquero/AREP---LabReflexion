@@ -1,5 +1,6 @@
 package edu.eci.escuelaing.arep.MySpring;
 
+import edu.eci.escuelaing.arep.HttpServer.HeadersCollection;
 import edu.eci.escuelaing.arep.MySpring.Annotations.RequestMapping;
 
 import java.lang.reflect.Method;
@@ -30,7 +31,7 @@ public class Boot {
         try{
             return beans.get(path).invoke(null).toString();
         } catch (Exception e){
-            return "Error :'(";
+            return HeadersCollection.HTML_HEADERS +  "La pagina no existe :|";
         }
     }
 }

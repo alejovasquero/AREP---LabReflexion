@@ -78,14 +78,12 @@ public class HttpServer {
 
     public static void findResponse(Socket clientSocket, HashMap<String, String[]> request) throws IOException, NoSuchElementException {
         String outputLine = null;
-        System.out.println(Arrays.toString(request.entrySet().toArray()));
         System.out.println(request.get("Accept:"));
         String type = request.get("Accept:")[1];
         System.out.println("HELLO: "+type);
         if(type.contains("text/html") || type.contains("text/css")){
             DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
             outputLine = boot.invoke(request.get("GET")[1]);
-            out.writeBytes(HeadersCollection.HTML_HEADERS);
             out.writeBytes(outputLine);
             out.close();
         } else {
