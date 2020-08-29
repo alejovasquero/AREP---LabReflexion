@@ -15,6 +15,7 @@ public class Main {
             bo.map(args[0]);
             System.out.println(bo.invoke("/"));
             HttpServer.setBoot(bo);
+            HttpServer.setPort(HttpServer.getPort());
             HttpServer.start();
         } catch (Exception e) {
             e.printStackTrace();
@@ -22,4 +23,5 @@ public class Main {
 
     }
 
+    public static
 }
